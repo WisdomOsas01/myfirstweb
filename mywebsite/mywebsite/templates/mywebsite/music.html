@@ -1,0 +1,23 @@
+{%extends "base.html" %}
+{%block content%}
+<table border="3">
+    <tr>
+        <th style="font-family:mv boli">MUSIC</th>
+        <th style="font-family:mv boli;">GENRE</th>
+    </tr>
+    <tbody>
+    {%for MUSICIANS in MUSICIANS %}
+        <tr>
+            <td>
+                 {%ifequal MUSICIANS.genre 'jazz'%}{% endifequal %}
+                 {%ifequal MUSICIANS.genre 'rock'%} {% endifequal %}
+                 {{MUSICIANS.name}}
+            </td>
+            <td>{{MUSICIANS.genre}}</td>
+        </tr>
+    {%endfor%}
+    </tbody>>
+</table>
+ <h1>THIS IS HOW TO CREATE A MUSICIAL LIST</h1>
+{%endblock content%}
+

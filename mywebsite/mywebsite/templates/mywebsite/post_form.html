@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{% load crispy_forms_tags %}
+{%block content%}
+<div class ="content-section">
+    <form method="POST">
+        {%csrf_token%}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">BLOG POST</legend>>
+            {{form|crispy}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">POST</button>
+        </div>
+    </form>
+</div>
+<p>the about page just tells us more about my website and its default<p>
+    <marquee>hello</marquee>
+    {%endblock content%}

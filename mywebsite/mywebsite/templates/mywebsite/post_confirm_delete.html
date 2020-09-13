@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block content%}
+<div class ="content-section">
+    <form method="POST">
+        {%csrf_token%}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">delete Post</legend>>
+            <h2>Are you sure you want to delete the post"{{object.title}}"</
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit">Yes,Delete</button>
+            <a class="btn btn-outline-secondary"  href="{%url 'post-delete' object.id%}">Cancel</a>
+        </div>
+    </form>
+</div>
+<p>the about page just tells us more about my website and its default<p>
+    <marquee>hello</marquee>
+    {%endblock content%}
